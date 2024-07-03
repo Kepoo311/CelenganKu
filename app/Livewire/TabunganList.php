@@ -13,6 +13,10 @@ class TabunganList extends Component
     public function mount(User $user)
     {
         $this->user = $user;
+
+        if ($user->id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
     }
 
     public function render()

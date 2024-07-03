@@ -16,6 +16,10 @@ class Menabung extends Component
 
     public function mount(Tabungan $id){
         $this->tabungan = $id;
+
+        if($id->user_id !== auth()->id()){
+            abort(403, 'Unauthorized action');
+        }
     }
 
     public function update(){

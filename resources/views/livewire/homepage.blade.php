@@ -12,9 +12,9 @@
               Catat jumlah tabungan-mu dengan CelenganKu!
             </p>
             @auth
-            <a href="/celengan/user/{{auth()->user()->id}}" class="btn btn-primary">Get Started</a>
+            <a href="/celengan/user/{{auth()->user()->id}}" class="btn btn-primary text-white">Coba sekarang</a>
             @else
-            <a href="/login" class="btn btn-primary">Get Started</a>
+            <a href="/login" class="btn btn-primary text-white">Coba sekarang</a>
             @endauth
           </div>
         </div>

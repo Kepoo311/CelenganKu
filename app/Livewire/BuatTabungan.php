@@ -24,9 +24,9 @@ class BuatTabungan extends Component
         $validated = $this->validate([
             'target_photo' => 'required|image|max:1024',
             'nama' => 'required',
-            'target_tabungan' => 'required',
+            'target_tabungan' => 'required|numeric|min:1000',
             'per' => 'required',
-            'jumlah_nabung' => 'required'
+            'jumlah_nabung' => 'required|numeric|min:1000'
         ]);
 
         $fileName = Str::random(20) . '-'. $this->target_photo->getClientOriginalName() . '.' . $this->target_photo->getClientOriginalExtension();

@@ -1,7 +1,7 @@
 @push('title','Tabungan list')
 
 <div class="min-h-screen">
-    <a href="/celengan/buat" class="btn btn-primary m-5">Nabung</a>
+    <a href="/celengan/buat" class="btn btn-primary m-5 text-white">Buat celengan</a>
 
     <div class="m-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
         @forelse ($tabungan as $item)
